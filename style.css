@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("todoli2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-color: #cccc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+}
+h4 {
+  text-align: justify;
+}
+
+button {
+  background-color: #27d3e3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4d9b98;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  width: 95%;
+padding: 10px;
+margin-top: 5px;
+
+border-radius: 5px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+select {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+.hidden {
+  display: none;
+}
+
+#notifications {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: cornsilk;
+  color: gray;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Status Tracker */
+.status-tracker {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-tracker p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Dark Mode */
+body.dark {
+  background-image: url("tododar4.jpeg");
+  color: white;
+}
+
+body.dark button:hover {
+  background-color: #7b8181;
+}
+
+body.dark h1 {
+  margin: 0;
+  color: #fff5f5;
+}
+
+body.dark .container {
+  background: rgb(37, 35, 35);
+}
+
+body.dark button {
+  background-color: #444;
+}
+
+body.dark li {
+  background: #444;
+  border-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  select {
+    flex: none;
+    width: 100%;
+  }
+
+  .status-tracker {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-lists h4 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
